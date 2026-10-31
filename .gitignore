@@ -45,3 +45,8 @@ coverage.xml
 *.swo
 .DS_Store
 Thumbs.db
+
+# Downloaded market data and local verification artifacts
+.cache/
+tmp/
+output/
