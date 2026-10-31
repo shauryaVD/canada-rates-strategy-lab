@@ -4,9 +4,11 @@ Canada Rates Strategy Lab is a Python research application for monitoring Govern
 
 The project was built as a public fixed-income research portfolio for interest-rate strategy and quantitative research roles. It emphasizes reproducible calculations, careful data lineage, explicit missing-data handling, and a backtest that reports basis-point outcomes instead of fictional investment returns.
 
+**[Open the live research dashboard](https://canada-rates-strategy-lab.onrender.com/)**
+
 ## Application preview
 
-The Streamlit interface uses a restrained navy research-workstation theme with five pages: Market Overview, Yield Curve, Relative Value, Backtesting, and Research Brief. The rendered application has been checked locally at desktop width across all five pages. A repository screenshot will be added after the first stable public deployment so the image corresponds to a durable public build.
+The Streamlit interface uses a restrained navy research-workstation theme with five pages: Market Overview, Yield Curve, Relative Value, Backtesting, and Research Brief. The public Render deployment and all five pages have been checked at desktop width with live Bank of Canada observations.
 
 ## Core capabilities
 
@@ -144,6 +146,8 @@ The test suite covers API parsing and metadata, invalid and missing values, dupl
 ## Deploy on Render
 
 The included `render.yaml` deploys the application as one free Render Python web service, following the same portfolio-hosting pattern as CreditPath. It installs `requirements.txt`, starts Streamlit on Render's assigned `PORT`, and checks `/_stcore/health`. No secrets, paid APIs, databases, or environment variables are required.
+
+Public URL: **https://canada-rates-strategy-lab.onrender.com/**
 
 The free service can spin down while idle, so the first recruiter visit after inactivity may take longer to load. Subsequent navigation is interactive once the service is awake.
 
