@@ -141,9 +141,11 @@ pytest -q
 
 The test suite covers API parsing and metadata, invalid and missing values, duplicates, cache integrity and fallback behavior, basis-point conversions, curve classifications, rolling statistics, chronological splits, future perturbation and prefix invariance, missing forward paths, overlapping events, report values, and one-page PDF generation. GitHub Actions runs lint and tests on Python 3.11 and 3.13 for pushes and pull requests.
 
-## Streamlit Community Cloud
+## Deploy on Render
 
-The repository is deployment-ready with `app.py` as the entry point and no secrets. In [Streamlit Community Cloud](https://share.streamlit.io/), create an app from this public GitHub repository, select branch `main`, set the entry point to `app.py`, and choose a supported Python version. No environment variables are required.
+The included `render.yaml` deploys the application as one free Render Python web service, following the same portfolio-hosting pattern as CreditPath. It installs `requirements.txt`, starts Streamlit on Render's assigned `PORT`, and checks `/_stcore/health`. No secrets, paid APIs, databases, or environment variables are required.
+
+The free service can spin down while idle, so the first recruiter visit after inactivity may take longer to load. Subsequent navigation is interactive once the service is awake.
 
 ## Research-only disclaimer
 
